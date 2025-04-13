@@ -1,0 +1,72 @@
+.navbarModal-item{
+    @apply hover:bg-[#222121] py-2 px-1
+}
+
+.home-sideNavbar{
+    @apply bg-black flex flex-col text-white fixed overflow-y-auto w-[275px] p-[18px] top-[48px]  h-[93vh]  scroll-smooth
+    
+}
+
+.home_sideNavbarTopOption{
+    @apply flex items-center gap-5 px-2 py-2 hover:bg-[#232323] rounded-[10px]
+}
+
+.homeSideNavbarHide{
+    display: none;
+}
+
+.home-sideNavbar::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Opera */
+  }
+
+  .home_sideNavbar_ImgLogo{
+    @apply rounded-full w-6 h-6
+  }
+
+  
+  /* -----------------Homepage---------------------- */
+
+
+  
+  .homepage{
+      @apply text-black relative top-12 left-[275px] bg-black  min-h-[93vh] flex flex-col overflow-x-hidden 
+    }
+  .homepage-full{
+      @apply text-black relative top-12 w-[100%] bg-black  min-h-[93vh] flex flex-col overflow-x-hidden 
+    }
+    
+    .homePage-option{
+      @apply bg-black flex fixed w-[calc(100%-275px)] text-white h-auto gap-3 overflow-x-scroll shrink-0 px-4 z-10
+    }
+    .homePage-full-option{
+      @apply bg-black flex fixed w-[100%] text-white h-auto gap-3 overflow-x-scroll shrink-0 px-4 z-10
+    } 
+
+    .homePage-option::-webkit-scrollbar {
+        display: none;
+    }
+    .homePage-full-option::-webkit-scrollbar {
+        display: none;
+    }
+
+    .homepage-videoPage{
+      @apply   text-red-600 relative top-12 grid grid-cols-3 gap-4 
+    }
+    .homepage-full-videoPage{
+      @apply   text-red-600 relative top-12 grid grid-cols-4 gap-3 
+    }
+
+    .homepage::-webkit-scrollbar {
+      display: none;                
+    }
+    .homepage-full::-webkit-scrollbar {
+      display: none;                
+    }
+
+
+    .videos{
+      @apply h-[340px]  border-red-500  text-white p-2
+    }
+
+
+   
