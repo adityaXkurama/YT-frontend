@@ -1,6 +1,4 @@
-.navbarModal-item{
-    @apply hover:bg-[#222121] py-2 px-1
-}
+
 
 .home-sideNavbar{
     @apply bg-black flex flex-col text-white fixed overflow-y-auto w-[275px] p-[18px] top-[48px]  h-[93vh]  scroll-smooth

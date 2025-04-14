@@ -1,6 +1,4 @@
-.video-page{
-    @apply   text-white  bg-black top-12 relative flex mx-12 justify-start  py-3
-}
+
 
 .videoPostSection{
     @apply max-w-[900px]  w-[100%]  flex flex-col  

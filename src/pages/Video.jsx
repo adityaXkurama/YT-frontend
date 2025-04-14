@@ -2,10 +2,11 @@ import React from "react";
 import "./pages.css";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
+import { Link } from "react-router-dom";
 
 const Video = () => {
   return (
-    <div className="video-page ">
+    <div className="video-page text-white  bg-black top-12 relative md:flex mx-12 justify-start  py-3">
       <div className="videoPostSection ml-5">
         <div className="videoPlay">
           <video
@@ -37,6 +38,7 @@ const Video = () => {
           </div>
           <div className="channel-info">
             <div className="profile">
+              <Link to={`/users/12`} >
               <div className="profile-pic w-8 h-8 ">
                 <img
                   src="/yt_thumbnail.png"
@@ -44,6 +46,7 @@ const Video = () => {
                   className="object-cover w-full h-full rounded-full"
                 />
               </div>
+              </Link>
               <div className="channel-name">
                 <div className="name">Cartoon Network india indiaaa </div>
                 <div className="subscribers">100k subscribers</div>

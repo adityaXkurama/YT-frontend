@@ -15,7 +15,7 @@ const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
   const [navbarModal,setNavbarModal] = useState(false);
   // const [login,setLogin] = useState(false);
   // const [isLogedIn,setIsLogedIn] = useState(false)
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleClickModal =()=>{
     setNavbarModal(prev=>!prev);
@@ -23,11 +23,11 @@ const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
   const sideNavbarFunc=()=>{
     setSideNavbarFunc(prev=>!prev)
   }
-  // const handleprofile =()=>{
-  //   let userId = localStorage.getItem("userId")
-  //   navigate(`/user/${userId}`);
-  //   setNavbarModal(false);
-  // }
+  const handleProfileClick =()=>{
+    // let userId = localStorage.getItem("userId")
+    navigate(`/users/766`);
+    setNavbarModal(false);
+  }
 
   const setLoginModal=()=>{
     setLogin(false);
@@ -106,9 +106,12 @@ const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
         { navbarModal &&
           <div className='navbar-modal absolute top-[35px] bg-[#555555] text-white w-[80px] '>
             {/* Please watch the video for the code} */}
-            <div className="navbarModal-item ">profile</div>
-            <div className="navbarModal-item ">log out</div>
-            <div className="navbarModal-item ">profile</div>
+            <div className="px-1 py-2 hover:bg-[#3b3b3b] " onClick={handleProfileClick}>profile</div>
+            <div className="px-1 py-2 hover:bg-[#3b3b3b] ">log out</div>
+            <div className="px-1 py-2 hover:bg-[#3b3b3b] ">profile</div>
+            
+            
+            
 
           </div>
         }
