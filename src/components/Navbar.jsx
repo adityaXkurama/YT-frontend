@@ -8,13 +8,14 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
 import { Link,useNavigate } from 'react-router-dom';
+import Login from '../pages/Login';
 // import Login from '../Login/login';
 // import axios from 'axios';
 const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
   const [userPic, setUserPic] = useState("https://th.bing.com/th/id/OIP.Wy2uo_y-ttULYs4chLmqSAAAAA?rs=1&pid=ImgDetMain")
   const [navbarModal,setNavbarModal] = useState(false);
-  // const [login,setLogin] = useState(false);
-  // const [isLogedIn,setIsLogedIn] = useState(false)
+  const [login,setLogin] = useState(false);
+  const [isLogedIn,setIsLogedIn] = useState(false)
   const navigate = useNavigate();
 
   const handleClickModal =()=>{
@@ -65,6 +66,8 @@ const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
 
   },[])
 
+  
+
 
   return (
     <div className=' flex items-center justify-between bg-black w-[100%] h-12  fixed z-20'>
@@ -107,8 +110,10 @@ const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
           <div className='navbar-modal absolute top-[35px] bg-[#555555] text-white w-[80px] '>
             {/* Please watch the video for the code} */}
             <div className="px-1 py-2 hover:bg-[#3b3b3b] " onClick={handleProfileClick}>profile</div>
-            <div className="px-1 py-2 hover:bg-[#3b3b3b] ">log out</div>
-            <div className="px-1 py-2 hover:bg-[#3b3b3b] ">profile</div>
+            <div className="px-1 py-2 hover:bg-[#3b3b3b] "
+            onClick={()=>onclickOfPopUpOption("logout")}>log out</div>
+            <div className="px-1 py-2 hover:bg-[#3b3b3b] "
+            onClick={()=>onclickOfPopUpOption("login")}>login</div>
             
             
             
@@ -118,9 +123,9 @@ const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
 
       </div>
 
-      {/* {
+      {
         login && <Login setLoginModal={setLoginModal} />
-      } */}
+      }
     </div>
   )
 }
