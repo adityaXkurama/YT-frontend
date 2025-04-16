@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./pages.css";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
 import { Link } from "react-router-dom";
 
 const Video = () => {
+
+  const [comment,setComment]= useState("")
+  useEffect(() => {console.log(comment)}, [comment]);
+  
   return (
     <div className="video-page text-white  bg-black top-12 relative md:flex mx-12 justify-start  py-3">
       <div className="videoPostSection ml-5">
@@ -88,6 +92,8 @@ const Video = () => {
             <div className="commentinput flex flex-col  w-[calc(100%-50px)]">
               <input
                 type="text"
+                value={comment}
+                onChange={(e)=>setComment(e.target.value)}
                 name=""
                 placeholder="add a comment"
                 className="bg-transparent border-b w-[100%] focus:outline-none"
